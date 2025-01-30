@@ -1,0 +1,263 @@
+@font-face {
+  font-family: Bai Jamjuree;
+  src: url("fonts/bai-jamjuree-v11-latin-600.woff2");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Bai Jamjuree;
+  src: url("fonts/bai-jamjuree-v11-latin-regular.woff2");
+  font-weight: 400;
+}
+
+:root {
+  --strongCyan: hsl(171, 66%, 44%);
+  --lightBlue: hsl(233, 100%, 69%);
+
+  --lightCyan: hsl(171, 52%, 58%);
+  --extraLightBlue: hsl(233, 100%, 77%);
+
+  --darkCyan: hsl(169, 65%, 37%);
+  --darkBlue: hsl(233, 67%, 59%);
+
+  --DarkGrayishBlue: hsl(210, 10%, 33%);
+  --GrayishBlue: hsl(201, 11%, 66%);
+
+  --font: 1.125rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Bai Jamjuree;
+  background-image: url("images/bg-header-mobile.png");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+  color: var(--GrayishBlue);
+  font-size: var(--font);
+  box-sizing: border-box;
+  margin: 0;
+}
+
+main {
+  padding-inline: 1.5rem;
+}
+
+.wrapper {
+  max-inline-size: 1115px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 600;
+  color: var(--DarkGrayishBlue);
+}
+
+h1 {
+  font-size: clamp(2rem, 1.2848rem + 3.1788vw, 3.5rem);
+  margin-block: 2rem;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 1.6093rem + 0.8477vw, 2.2rem);
+}
+
+p {
+  max-inline-size: 75ch;
+  margin-inline: auto;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  margin-block: 2rem;
+}
+
+.button {
+  text-decoration: none;
+  font-weight: 600;
+  color: #fff;
+  padding: 0.9rem 2.2rem;
+  border-radius: 30px;
+  margin-block: 1rem;
+}
+
+.ios-btn {
+  background-color: var(--strongCyan);
+  box-shadow: 0 4px 0 var(--darkCyan);
+
+  &:hover {
+    background-color: var(--lightCyan);
+  }
+}
+
+.mac-btn {
+  background-color: var(--lightBlue);
+  box-shadow: 0 4px 0 var(--darkBlue);
+
+  &:hover {
+    background-color: var(--extraLightBlue);
+  }
+}
+
+section {
+  /* border: 3px solid red; */
+  padding-block: 4rem;
+}
+
+.two-column-section {
+  text-align: center;
+}
+
+.primary-image {
+  inline-size: 100%;
+  display: block;
+  margin-block: auto;
+  padding-block-end: 3rem;
+}
+
+.three-column-grid img {
+  padding-block-end: 2rem;
+}
+
+.company-logos img {
+  display: block;
+  margin-inline: auto;
+  margin-block-end: 4rem;
+}
+
+footer {
+  background-color: #f5f6f8;
+  text-align: center;
+  color: #4d555b;
+}
+
+footer img {
+  padding-block-start: 3rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+    color: var(--strongCyan);
+  }
+}
+
+.footer-tool-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding-block: 2rem;
+}
+
+.social-link-icon {
+  font-size: 1.5rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+
+}
+
+footer p {
+  margin: 0;
+  padding-block: 2rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+footer p a {
+  text-decoration: underline;
+}
+
+
+
+@media (width > 700px) {
+  body {
+    background-image: url("images/bg-header-desktop.png");
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: contain;
+  }
+
+  .two-column-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .two-column-section>div {
+    text-align: start;
+    margin-block: auto;
+
+    p {
+      max-inline-size: 34ch;
+      margin-inline: initial;
+    }
+  }
+
+  .two-column-section div div {
+    margin-block-end: 4rem;
+  }
+
+  .cta-buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .three-column-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+
+
+  }
+
+
+  .company-logos {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+
+    img {
+      margin-block: auto;
+      max-inline-size: 100%;
+    }
+  }
+
+  footer .wrapper {
+    display: flex;
+    gap: 5rem;
+    padding-inline: 1.5rem;
+
+    img {
+      padding: 0;
+      margin-block: auto;
+    }
+  }
+
+  .separated-section {
+    inline-size: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .footer-tool-link {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: flex-start;
+  }
+}
