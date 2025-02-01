@@ -194,7 +194,7 @@ footer p a {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
 
-    .primary-image {
+    & .primary-image {
       max-inline-size: 944px;
       justify-self: flex-end;
     }
