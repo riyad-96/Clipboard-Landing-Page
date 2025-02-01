@@ -108,7 +108,6 @@ p {
 }
 
 section {
-  /* border: 3px solid red; */
   padding-block: 4rem;
 }
 
@@ -194,6 +193,11 @@ footer p a {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
+
+    .primary-image {
+      max-inline-size: 944px;
+      justify-self: flex-end;
+    }
   }
 
   .two-column-section>div {
